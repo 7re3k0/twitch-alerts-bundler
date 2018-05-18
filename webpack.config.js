@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production'; // Check if it's productio
 const cssDev = ['style-loader', 'css-loader', 'sass-loader'];
 const cssProd = ExtractTextPlugin.extract({
   fallback: 'style-loader',
-  use: ['css-loader', 'postcss-loader', 'sass-loader'],
+  use: ['css-loader', 'sass-loader'],
 });
 const cssConfig = isProd ? cssProd : cssDev;
 
